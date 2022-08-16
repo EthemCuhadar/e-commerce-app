@@ -66,7 +66,7 @@ const LinkItem = styled.a`
     }
 `
 
-const NavbarProducts = () => {
+const NavbarUser = () => {
 
     const nav = useNavigate()
 
@@ -92,4 +92,4 @@ const NavbarProducts = () => {
   )
 }
 
-export default NavbarProducts
+export default NavbarUser
