@@ -54,7 +54,7 @@ const OrderDetails = styled.h3`
     color: black;
 `
 
-const Order = ( {order} ) => {
+const UserOrder = ( {order} ) => {
     if (!order.deliveryDate) {
         return (
         <Container>
@@ -84,4 +84,4 @@ const Order = ( {order} ) => {
     }
 }
 
-export default Order
+export default UserOrder
