@@ -86,7 +86,7 @@ const LoginPage = () => {
                     <Form>
                         <Input type="email" placeholder="Email" value={formState.email} onChange={e => setFormState({ ...formState, email: e.target.value })} />
                         <Input type="password" placeholder="Password" value={formState.password} onChange={e => setFormState({ ...formState, password: e.target.value })} />  
-                        <Button>Login</Button>                    
+                        <Button onClick={handleSubmit} >Login</Button>                    
                     </Form>               
                 </Wrapper>
             </Container>
