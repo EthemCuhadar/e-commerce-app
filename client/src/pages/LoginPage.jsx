@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import NavbarLogin from "../components/NavbarLogin"
+import { useNavigate } from "react-router-dom"
 
 const Container = styled.div`
     width: 100vw;
@@ -51,6 +52,9 @@ const Button = styled.button`
 `
 
 const LoginPage = () => {
+
+    const nav = useNavigate();
+
   return (
         <div>
             <NavbarLogin />
