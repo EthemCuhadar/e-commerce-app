@@ -71,6 +71,12 @@ const LoginPage = () => {
         }
     });
 
+    const handleSubmit = e => {
+        console.log(formState);
+        e.preventDefault();
+        login({ variables: formState });
+    }
+
   return (
         <div>
             <NavbarLogin />
