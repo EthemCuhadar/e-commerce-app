@@ -24,7 +24,7 @@ const Title = styled.h1`
     margin: 10px 0;
 `
 
-const UserOrders = () => {
+const UserOrderList = () => {
     return (
         <Container>
             <Wrapper>
@@ -35,4 +35,4 @@ const UserOrders = () => {
     )
 }
 
-export default UserOrders
+export default UserOrderList

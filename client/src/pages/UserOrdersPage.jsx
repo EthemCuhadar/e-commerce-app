@@ -1,12 +1,12 @@
 import React from 'react'
 import NavbarWelcome from '../components/NavbarWelcome'
-import UserOrders from '../components/UserOrders'
+import UserOrderList from '../components/UserOrderList'
 
 const UserOrdersPage = () => {
   return (
     <div>
         <NavbarWelcome />
-        <UserOrders />
+        <UserOrderList />
     </div>
   )
 }
