@@ -84,7 +84,7 @@ const NavbarProducts = () => {
             <Right>
                 <LinkItem href="/home">Home</LinkItem>
                 <LinkItem onClick={handleLogout} >Logout</LinkItem>
-                <LinkItem href="/products">Products</LinkItem>
+                <LinkItem href="/user">Profile</LinkItem>
                 <LinkItem href="/orders">Orders</LinkItem>
             </Right>
         </Wrapper>
