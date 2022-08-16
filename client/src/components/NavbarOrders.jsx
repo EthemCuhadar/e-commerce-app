@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useNavigate } from "react-router-dom"
 
 const Container = styled.div`
     height: 80px;
@@ -67,6 +68,7 @@ const LinkItem = styled.a`
 `
 
 const NavbarWelcome = () => {
+    const nav = useNavigate()
 
     const handleLogout = () => {
         localStorage.removeItem("token")
