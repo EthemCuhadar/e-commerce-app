@@ -31,19 +31,35 @@ const UserDetails = styled.h3`
     margin-bottom: 20px;
 `
 
-const UserProfile = ( {user} ) => {
-    return (
-    <Container>
-        <Wrapper>
-            <Title>User Profile</Title>
-            <UserDetails>
-                <p>Name: {user.name} </p>
-                <p>Email: {user.email} </p>
-                <p>Contact: {user.contact} </p>
-            </UserDetails>
-        </Wrapper>
-    </Container>
-    )
+const UserProfile = (user) => {
+
+    if (!user.user.contact) {
+        return (
+            <Container>
+                <Wrapper>
+                    <Title>User Profile</Title>
+                    <UserDetails>
+                        <p>Name: {user.user.name} </p>
+                        <p>Email: {user.user.email} </p>
+                        <p>Contact: - </p>
+                    </UserDetails>
+                </Wrapper>
+            </Container>
+        )
+    } else {
+        return (
+        <Container>
+            <Wrapper>
+                <Title>User Profile</Title>
+                <UserDetails>
+                    <p>Name: {user.user.name} </p>
+                    <p>Email: {user.user.email} </p>
+                    <p>Contact: {user.user.contact} </p>
+                </UserDetails>
+            </Wrapper>
+        </Container>
+        )
+    }
 }
 
 export default UserProfile

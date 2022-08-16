@@ -1,27 +1,36 @@
 import React from "react";
 import NavbarUser from "../components/NavbarUser"
 import { useNavigate } from "react-router-dom"
-import { useMutation, gql } from "@apollo/client";
+import { useQuery, gql } from "@apollo/client";
 import UserProfile from "../components/UserProfile";
 
 const UserProfilePage = () => {
 
     const nav = useNavigate();
 
-    const {data, loading, error} = useMutation(LOGIN_USER)
+    const {data, loading, error} = useQuery(USER_DETAILS)
 
-    const handleLogout = e => {
-        e.preventDefault();
-        localStorage.removeItem("token");
-        nav("/");
+    if (data) {
+        console.log(data)
     }
 
-  return (
-        <div>
-            <NavbarUser />
-            <UserProfile user={data} />
-        </div>
-  )
+
+    // pass the user data to the UserProfile component
+    if (data) {
+        return (
+            <div>
+                <NavbarUser />
+                    <UserProfile user={data.user} />
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                <NavbarUser />
+                <h1>Loading...</h1>
+            </div>
+        )
+    }
 }
 
 const USER_DETAILS = gql`
