@@ -35,4 +35,26 @@ const UserOrderList = () => {
     )
 }
 
+const GET_ORDERS = gql`
+    query {
+        orders(startDate: "15.06.2020", endDate: "15.06.2022") {
+            id
+            orderName
+            total
+            orderDate
+            details {
+                product {
+                    id
+                    price {
+                        price {
+                            priceId
+                            price
+                        }
+                    }
+                }
+            }
+        }
+    }
+`
+
 export default UserOrderList
