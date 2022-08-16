@@ -84,8 +84,8 @@ const LoginPage = () => {
                 <Wrapper>
                     <Title>LOGIN</Title>
                     <Form>
-                        <Input type="email" placeholder="Email" />
-                        <Input type="password" placeholder="Password" />  
+                        <Input type="email" placeholder="Email" value={formState.email} onChange={e => setFormState({ ...formState, email: e.target.value })} />
+                        <Input type="password" placeholder="Password" value={formState.password} onChange={e => setFormState({ ...formState, password: e.target.value })} />  
                         <Button>Login</Button>                    
                     </Form>               
                 </Wrapper>
