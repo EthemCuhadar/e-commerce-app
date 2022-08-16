@@ -8,7 +8,7 @@ const UserProfilePage = () => {
 
     const nav = useNavigate();
 
-    const {data, loading, error} = useQuery(USER_DETAILS)
+    const {data} = useQuery(USER_DETAILS)
 
     if (data) {
         console.log(data)
