@@ -1,6 +1,5 @@
 import React from 'react'
-import Announcements from '../components/Announcements'
-import Products from '../components/Products'
+import ProductList from '../components/ProductList'
 import NavbarProduct from '../components/NavbarProduct'
 
 const ProductsPage = () => {
@@ -8,7 +7,7 @@ const ProductsPage = () => {
   return (
     <div>
         <NavbarProduct/>
-        <Products/>
+        <ProductList/>
     </div>
   )
 }
