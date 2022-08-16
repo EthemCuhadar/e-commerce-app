@@ -33,8 +33,9 @@ const Right = styled.div`
 const Left = styled.div`
     flex: 1;
     display: flex;
-    align-items: left;
+    align-items: center;
     height: 20%;
+    
 `
 
 const Title = styled.h1`
