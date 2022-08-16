@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import NavbarLogin from "../components/NavbarLogin"
 import { useNavigate } from "react-router-dom"
+import { useMutation, gql } from "@apollo/client";
 
 const Container = styled.div`
     width: 100vw;
@@ -58,6 +59,16 @@ const LoginPage = () => {
     const [formState, setFormState] = React.useState({
         email: '',
         password: ''
+    });
+
+    const [login, {data, loading, error}] = useMutation(LOGIN_USER, {
+        onCompleted(data) {
+            if (data) {
+                localStorage.setItem('token', data.login);
+                console.log(data);
+                nav('/');
+            }
+        }
     });
 
   return (
