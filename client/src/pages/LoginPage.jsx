@@ -54,6 +54,11 @@ const Button = styled.button`
 const LoginPage = () => {
 
     const nav = useNavigate();
+    
+    const [formState, setFormState] = React.useState({
+        email: '',
+        password: ''
+    });
 
   return (
         <div>
