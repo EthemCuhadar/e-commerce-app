@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import NavbarLogin from "../components/NavbarLogin"
 
 const Container = styled.div`
     width: 100vw;
@@ -51,7 +52,19 @@ const Button = styled.button`
 
 const LoginPage = () => {
   return (
-    <div>LoginPage</div>
+        <div>
+            <NavbarLogin />
+            <Container>
+                <Wrapper>
+                    <Title>LOGIN</Title>
+                    <Form>
+                        <Input type="email" placeholder="Email" />
+                        <Input type="password" placeholder="Password" />  
+                        <Button>Login</Button>                    
+                    </Form>               
+                </Wrapper>
+            </Container>
+        </div>
   )
 }
 
