@@ -67,7 +67,7 @@ const LoginPage = () => {
             if (data) {
                 localStorage.setItem('token', data.login);
                 console.log(data);
-                nav('/');
+                nav('/home');
             }
         }
     });
